@@ -4,7 +4,7 @@ from rest_framework.permissions import IsAuthenticated
 from tracker.models import PleasantHabit, UsefulHabit
 from tracker.paginators import HabitPagination
 from tracker.serializers import PleasantHabitSerializer, UsefulHabitSerializer
-from users.permissions import IsOwner
+from users.premissions import IsOwner
 
 
 class PleasantHabitViewSet(viewsets.ModelViewSet):
