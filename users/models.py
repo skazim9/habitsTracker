@@ -6,8 +6,9 @@ from phonenumber_field.modelfields import PhoneNumberField
 class User(AbstractUser):
     username = None
     email = models.EmailField(unique=True, verbose_name="Email", help_text="Введите email")
-    chat_id = models.CharField(max_length=50, verbose_name="Телеграм сhat-id",
-                               help_text="Укажите телеграм сhat-id", null=True, blank=True)
+    chat_id = models.CharField(
+        max_length=50, verbose_name="Телеграм сhat-id", help_text="Укажите телеграм сhat-id", null=True, blank=True
+    )
     avatar = models.ImageField(
         upload_to="users/avatars/", blank=True, null=True, verbose_name="Аватар", help_text="Загрузите аватар"
     )

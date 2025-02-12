@@ -12,6 +12,10 @@ class UsefulHabitAdmin(admin.ModelAdmin):
 
 @admin.register(PleasantHabit)
 class PleasantHabitAdmin(admin.ModelAdmin):
-    list_display = ("id", "user", "action",)
+    list_display = (
+        "id",
+        "user",
+        "action",
+    )
     search_fields = ("action",)
     ordering = ("id",)
